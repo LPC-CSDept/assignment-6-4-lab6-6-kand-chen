@@ -16,6 +16,8 @@ using namespace std;
 // Make a line for Function Prototype for getListprime Here
 //----------
 
+void getListprime(int b, int e);
+
 int main()
 {
 	int begin, end;
@@ -24,12 +26,28 @@ int main()
 	if (begin < end)
 		getListprime(begin, end);
 	else if (begin > end)
-		getListprime();
+		getListprime(2, 100);
 	else
-		getListprime(begin);
+		getListprime(begin, 100);
 }
-void getListprime(int begin, int end)
+void getListprime(int b, int e)
 {
 
 	// Complete this function
+	int N, flag;
+	for(int N = b; N<e; N++){
+		flag = 0;
+		for (int j=2; j<N;j++)
+		{
+		if (N % j == 0) {
+			flag = 1;
+			break;
+	
+		}
+		}
+	if (flag == 0 && N != 1 && N != 0){
+		cout << N << "\t";
+	}
+	}	
+
 }
